@@ -40,6 +40,8 @@ article{
     height: 500px;
     background-image:url(./images/img.jpg) ;
     background-size:1100px 500px;
+    display: flex;
+    align-items: center;
 
 }
 article h1{
@@ -66,6 +68,12 @@ article a{
 article a:hover{
     color: black;
     background-color: white;
+    
+}
+article img{
+    max-height: 100%;
+    max-width: 100%;
+    text-align: center;
     
 }
 footer{
@@ -113,72 +121,84 @@ form{
     vertical-align: center;
 
 }
-@media screen and (max-width:999px){
+
+
+@media screen and (max-width:999px) and (min-width:600px)
+{
     .container{
-        width: 100%;
         height: auto;
-        margin: auto;
+        width: auto;
     }
     header{
+        height: auto;
         width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        background-color: blueviolet;
-    }
-    header h3{
-        margin-left: 20px;
-        line-height: 50px;
-    }
-    header nav{
-        display:flex;
-        align-items: center;
-        margin-right: 40px;    
-    }
-    header a{
-        margin: 20px;
-        text-decoration: none;
-        color: blanchedalmond;
-        line-height: 30px;
-        text-align: center;
-    
-    }
-    header a:hover{
-        background-color: white;
-        color: black;
     }
     article{
+        height: auto;
         width: 100%;
-        /* height: 500px;
-        background-image:url(img.jpg) ;
-        background-size:cover; */
-    
     }
     article h1{
-        color: white;
-        margin-left: 20px;
-        font-size: 3.0em;
-        padding-top: 30px;
-       
+        font-size: 36px;
+        line-height: 50px;
     }
-    article button{
-        margin-left: 20px;
-        width: 100px;
-        height: 40px;
-        color: white;
-        background-color:aqua;
-        margin-top: 40px;
+    article img{
+        height: 100%;
+        width: 100%;
+    }
+    article a{
+        margin-bottom: 10px;
     }
     footer{
-        width:100%;
-        height: 50px;
-        background-color: black;
-        line-height: 50px;
-    
+        height: auto;
+        width: 100%;
     }
-    footer i{
-        
-        margin-left:50px;
-    }
-    
+
 }
+
+
+
+@media screen and (max-width:600px){
+    .container{
+        height: auto;
+        width: auto;
+    }
+    header{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+    }
+    header a{
+        border: 1px solid black;
+        padding: 5px;
+        margin: 3px;
+    }
+    article{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    article h1{
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    line-height: 50px;
+    } 
+
+    article img{
+        height: auto;
+        width: auto;
+    }  
+    article a{
+        margin-bottom: 10px;
+    } 
+    footer{
+        height: auto;
+        width: 100%;
+    } 
+}
+
